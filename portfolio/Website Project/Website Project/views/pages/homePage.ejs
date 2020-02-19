@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home | Bop That!</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../resources/css/homeandviews.css">
+<style >
+	/* Responsive layout */
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+	<div class="header">
+	<h1>Bop That!</h1>
+	</div>
+	<div class="bar">
+		<a href="https://github.com/kaeleng/3308-project/issues"  class="active">Link To Our Github</a>
+		<a href="/scores">View the TOP Bop That Scores</a>
+		<a href="/login" class="right">SIGN OUT</a>
+	</div>
+
+	<div class="row">
+		<div class="leftSide">
+			<br>
+			<h2>Play The Game</h2>
+      <br><br>
+			<h2><a href="/game" class="button button1" role="button" aria-pressed="true">BOP THAT!</a></h2>
+			<br><br>
+		</div>
+		<div class="rightSide">
+			<h2>How To Play</h2><br><br><br>
+			<h4>Basics</h4>
+			<h3>This game is easy to learn: press the key that appears on the screen before time runs out.</h3>
+			<h3>Your score varies based on your timing. To get the most points, bop the correct key when the percussion (below) plays.</h3>
+      <audio controls>
+        <source src="../../resources/music/percussion.ogg" type="audio/ogg">
+        <source src="../../resources/music/percussion.mp3" type="audio/mpeg">
+        (Your browser does not support the audio element.)
+      </audio>
+			<h3>As you go, the game will get faster, more keys will be added, and the soundtrack & visuals will get more intense. See if you can make it to 246 bops!</h3>
+			<!-- <br>
+			<a href="https://github.com/kaeleng/3308-project/issues" class="btn btn-primary btn-lg " role="button" aria-pressed="true">View High Scores</a> -->
+		</div>
+	</div>
+	<div class="bar">
+		<br>
+		<br>
+	</div>
+	<div class="foot">
+		<h6>Group Project by: <b>Nate Wilson, Alex Haynie, Nate Howard, Kaelen Guthrie, Austin Bailly, Sheldon Ray</b></h6>
+	</div>
+</body>
+</html>

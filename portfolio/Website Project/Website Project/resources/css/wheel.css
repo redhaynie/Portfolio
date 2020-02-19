@@ -1,0 +1,13 @@
+.btn-lg{
+	padding: 30px;
+	font-size: 30px;
+	border-radius: 20 px;
+	background: rgb(20, 20, 255);
+}
+
+.btn-xl{
+	padding: 50px;
+	font-size: 50px;
+	border-radius: 20px;
+	background: rgb(214, 46, 191);
+}

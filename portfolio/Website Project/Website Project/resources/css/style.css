@@ -1,0 +1,39 @@
+body{
+	background:rgb(175, 238, 238);
+}
+
+#username{
+	width:50%;
+	margin:auto;
+	margin-bottom:1.5em;
+}
+
+#password{
+	width:50%;
+	margin:auto;
+	margin-bottom:1.5em;
+}
+
+#checkPassword{
+	width:50%;
+	margin:auto;
+	margin-bottom:1.5em;
+}
+
+#pswLabel{
+	width:50%;
+	margin:auto;
+}
+
+.myClass{
+	width:50%;
+	margin:auto;
+	margin-top:3em;
+	padding:1.5em;
+	background:rgb(144,238,144);
+	box-shadow:5px 5px 10px #575757;
+}
+
+.form-group{
+	font-size:1.5em;
+}

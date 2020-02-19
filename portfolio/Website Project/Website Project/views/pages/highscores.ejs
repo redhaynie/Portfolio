@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+	<title>
+		High Scores
+	</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../resources/css/homeandviews.css">
+<style >
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+/* The media screen is the responsive layout part of the bar and the columns stacking*/
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+
+<body>
+
+	<div class="header">
+		<h1>
+			High Scores!
+		</h1>
+	</div>
+
+	<div class="bar">
+		<a href="https://github.com/kaeleng/3308-project/issues"  class="active"> Link To Our Github </a>
+		<a href="/selection"> Home Page</a>
+		<a href="/login"  class="right"> SIGN OUT </a>
+	</div>
+
+	<table class="table table-bordered" id = "stats_table">
+		<tr>
+			<th class="align-bottom" rowspan="2">Score number</th>
+			<th class="align-bottom" rowspan="2">Name</th>
+			<th class="align-bottom"rowspan="2">Date of score</th>
+			<th class="align-bottom" rowspan="2">Score</th>
+		</tr>	
+<tr>
+</tr>
+			<% if (data){
+				var blank = '';
+				var count = 1;
+				data.forEach(function(item){
+					
+					
+					if(count == 1)
+					{
+					blank+='<tr bgcolor = "#BDB76B" height = "100" style = "text-align:center ">';
+						blank += '<td style = "vertical-align:middle">' + count + '</td>';
+					blank+= '<td style = "vertical-align:middle">' + item.playername +'</td>';
+					blank+= '<td style = "vertical-align:middle">' + item.highscoredate +'</td>';
+					blank += '<td style = "vertical-align:middle">' + item.highscore + '</td>';	
+					}
+
+					else if(count == 2)
+					{
+					blank+='<tr height = "75"  bgcolor = "#E6E6FA"style = "text-align:center">';
+						blank += '<td style = "vertical-align:middle" >'  + count + '</td>';
+					blank+= '<td style = "vertical-align:middle">' + item.playername +'</td>';
+					blank+= '<td style = "vertical-align:middle">' + item.highscoredate +'</td>';
+					blank += '<td style = "vertical-align:middle">' + item.highscore + '</td>';	
+					}
+
+					else if(count == 3)
+					{
+					blank+='<tr bgcolor = "#B8860B"style = "text-align:center">';
+						blank += '<td >' + count + '</td>';
+					blank+= '<td>' + item.playername +'</td>';
+					blank+= '<td>' + item.highscoredate +'</td>';
+					blank += '<td>' + item.highscore + '</td>';	
+					}
+
+					else {
+					blank+='<tr style = "text-align:center ">';
+					blank += '<td>' + count + '</td>';
+					blank+= '<td>' + item.playername +'</td>';
+					blank+= '<td>' + item.highscoredate +'</td>';
+					blank += '<td>' + item.highscore + '</td>';
+					}
+					count+=1;
+
+				});%>
+<%-blank%>
+<%}%>
+		
+		
+	</table>
+		<div class="bar">
+		<br>
+		<br>
+	</div>
+	<div class="foot">
+		<h6>Group Project by: <b>Nate Wilson, Alex Haynie, Nate Howard, Kaelen Guthrie, Austin Bailly, Sheldon Ray</b></h6>
+	</div>
+</body>
+</html>

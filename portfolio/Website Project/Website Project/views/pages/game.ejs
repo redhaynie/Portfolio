@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="../../resources/js/game.js"></script>
+	<title>Bop That!</title>
+	<style>
+		* {
+			font-size: 1.36em;
+			font-family: Helvetica;
+			text-align: center;
+		}
+		body {
+			background-color: #f8f8f8;
+		}
+		#top {
+			position: absolute;
+			right: 2%;
+			width: 96%;
+			bottom: 60%;
+		}
+		#bottom {
+			position: absolute;
+			right: 2%;
+			width: 96%;
+			top: 45%;
+		}
+
+		#output {
+			margin: 10px;
+		}
+		#highlight {
+			font-family: Courier;
+			--highlight-hue: 30;
+			border: 3px solid hsl(var(--highlight-hue), 100%, 50%);
+			color: hsl(var(--highlight-hue), 100%, 43%);
+			background-color: hsla(var(--highlight-hue), 100%, 50%, 15%);
+			border-radius: 5px;
+			padding: 7px 15px 9px;
+			margin: 0px 10px 0px;
+		}
+
+		.button {
+			font-size: 1em;
+			background-color: rgba(255, 255, 255, 0);
+			color: black;
+			border: 2px solid var(--main-color);
+			border-radius: 5px;
+			padding: 16px 32px;
+			margin-right: 0px;
+			text-align: center;
+			display: inline-block;
+			-webkit-transition-duration: 0.4s; /* Safari */
+			transition-duration: 0.4s;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		.button:hover {
+			background-color: var(--main-color);
+			color: white;
+		}
+		.popup {
+			font-size: 1em;
+			font-style: italic;
+			margin: 25px 0px 0px;
+			color: #888888;
+		}
+
+		#latency {
+			font-size: .6em;
+			background-color: rgba(255, 255, 255, 0);
+			color: gray;
+			border: 0px solid white;
+			border-radius: 5px;
+			padding: 7px;
+			text-align: center;
+			display: inline-block;
+		}
+		#latency:hover {
+			background-color: #f0f0f0;
+			color: #000000;
+		}
+
+		#play    {--main-color: #00aa00;}
+		#restart {--main-color: #0066ff;}
+		#leave   {--main-color: #f00000;}
+	</style>
+</head>
+<body>
+	<button id="latency">Change Audio Latency</button>
+
+	<div id="top">
+		<span id="output">Get ready to</span><span id="highlight">Bop That!</span><br>
+	</div>
+	<div id="bottom">
+		<span class="button" id="play">PLAY</span>
+		<button class="button" id="restart">Restart</button>
+		<a href="/selection" class="button" id="leave">Leave</a>
+
+		<p class="popup" id="score">Score will go here</p>
+		<p class="popup" id="speed">Speeding up!</p>
+		<p class="popup" id="letter">More letters added!</p>
+	</div>
+
+	<audio id="audio"><source src="../../resources/music/BopThat.mp3" type="audio/mpeg"/></audio>
+</body>
+</html>
